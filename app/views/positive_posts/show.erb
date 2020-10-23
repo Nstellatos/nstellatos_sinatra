@@ -1,0 +1,14 @@
+Show Page for Positive Post 
+
+<p><%= @positive_post.content%></p>
+
+<% if authorized_to_edit?(@positive_post) %>
+<a href="/positive_posts/<%= @positive_post.id %>/edit">Edit Post</a>
+<br><br>
+
+<form class="" action="/positive_posts/<%= @positive_post.id %>" method="post">
+<input type="hidden" name="_method" value="DELETE">
+<input type="submit" name="" value="Delete Post">
+</form>
+<% end %>
+

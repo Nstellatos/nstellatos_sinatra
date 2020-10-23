@@ -1,0 +1,43 @@
+[] - User can create, read, update and delete a post
+
+Interface
+- User can view post form
+- User can submit post form 
+- User can edit post 
+- User can delete post
+
+User class
+- attributes => name, password
+- user signs up/logs in 
+- has many posts
+
+User Controller and Views
+- '/users/signup' => renders sign up form
+- '/users/signup' => processes sign up form, creates user, posts
+- '/users/login' => renders login form
+- '/users/login' => processes login form, post
+- need to set sessions
+- user can view their posts, '/users/:id/posts 
+
+Posts class
+- attributes => date, name, category....
+- post belongs to a user
+
+Post Controller and Views
+- '/posts/new' => renders new post form 
+- '/posts' => submits post
+- '/posts' => renders all posts
+- '/posts/:id => renders one instance
+- '/posts/:id/:edit => renders update form for an instance
+- '/posts/:id => updates instance 
+- '/posts/:id/:delete => deletes instance 
+
+
+where to start?
+- set up classes
+- set up database
+- user controller
+- posts controller 
+
+
+

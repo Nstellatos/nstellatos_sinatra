@@ -1,0 +1,10 @@
+Edit form goes here
+
+
+<form action="/positive_posts/<%= @positive_post.id%>" method="post">
+<input type="hidden" name="_method" value="patch">
+<label for="content">Content</label>
+<textarea name="content" style="width:auto; height:auto;"><%= @positive_post.content %></textarea>
+    <input type="submit" name="" value="Edit Entry">
+
+</form>

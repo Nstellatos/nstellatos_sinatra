@@ -1,0 +1,9 @@
+All Positive Posts 
+<% @positive_posts.each do |positive_post| %>
+   <h4><a href="/positive_posts/<%= positive_post.id %>"> <%= positive_post.created_at %></a></h4>
+
+  <p> <%= positive_post.content %> </p>
+  <p>By <%= positive_post.user.name %></p>
+    
+<br><br>
+<% end %>
