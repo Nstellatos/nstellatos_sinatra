@@ -1,6 +1,11 @@
-Show Page for Positive Post 
-
+<div class="welcome-img"></div>
+<br>
+<br>
+<div class="welcome">
 <p><%= @positive_post.content%></p>
+<br>
+<br>
+<br>
 
 <% if authorized_to_edit?(@positive_post) %>
 <a href="/positive_posts/<%= @positive_post.id %>/edit">Edit Post</a>
@@ -11,4 +16,4 @@ Show Page for Positive Post
 <input type="submit" name="" value="Delete Post">
 </form>
 <% end %>
-
+</div>

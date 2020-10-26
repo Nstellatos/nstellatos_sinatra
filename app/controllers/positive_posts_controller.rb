@@ -26,13 +26,10 @@ post '/positive_posts/new' do
 			@positive_post = PositivePost.create(content: params[:content], user_id: current_user.id)
 			redirect "/positive_posts/#{@positive_post.id}"
 		else
-			flash[:errors] = "Something went wrong"
+			flash[:errors] = "You need to add some content to share a post"
 			redirect '/positive_posts/new'
 		end
 	end
-	
-	
-	
 	
 	#show route for a positive post
 	get '/positive_posts/:id' do 
@@ -67,7 +64,8 @@ post '/positive_posts/new' do
 		#3. redirect to show page 
 		redirect "/positive_posts/#{@positive_post.id}"
 			else  
-				redirect "/users/#{current_user.id}"
+				flash[:errors] = "You cannot submit a blank post"
+				redirect "/positive_posts/#{@positive_post.id}/edit"
 			end
 		end
 	

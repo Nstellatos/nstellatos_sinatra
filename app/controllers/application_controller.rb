@@ -34,6 +34,7 @@ end
     def authorized_to_edit?(positive_post)
       positive_post.user == current_user
   end
+  
     def redirect_if_not_logged_in
       if !logged_in?
         flash[:errors] = "You must be logged in view that page"

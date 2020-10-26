@@ -1,10 +1,16 @@
-Edit form goes here
-
+<div class="welcome-img"></div>
+<div class="welcome">
+<h3>Edit Your Post</h3>
+<br>
+<br>
 
 <form action="/positive_posts/<%= @positive_post.id%>" method="post">
 <input type="hidden" name="_method" value="patch">
-<label for="content">Content</label>
+<label for="content">Content:</label>
+<br>
 <textarea name="content" style="width:auto; height:auto;"><%= @positive_post.content %></textarea>
+<br>
     <input type="submit" name="" value="Edit Entry">
 
 </form>
+</div>

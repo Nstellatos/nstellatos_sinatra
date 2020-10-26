@@ -18,10 +18,11 @@
 
 
 
-
   <div class="topnav">
   <% if logged_in? %>
     <a class="active" href="/logout">Log Out</a>
+    <a href="/users/<%= current_user.id%>">Home</a>
+
     <a href="/positive_posts">All Positive Posts</a>
     <a href="/positive_posts/new">New Post</a>
     <% end %>
@@ -32,8 +33,9 @@
 
     <div class="wrapper">
     <% if flash[:message] %>
-<h3><%= flash[:message] %> </h3>
+<h3 style="color: blue;"><%= flash[:message] %> </h3>
 <% end %>
+
 <% if flash[:errors] %>
 <h3 style="color: red;"><%= flash[:errors] %> </h3>
 <% end %>
@@ -41,10 +43,14 @@
 
         <%= yield %>
 
-      <footer class="branding">
-        <small>&copy; 2020 <strong>NstellatosSinatra</strong></small>
-      </footer>
-    </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+      
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <!--[if lt IE 7]>

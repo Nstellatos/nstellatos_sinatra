@@ -1,9 +1,12 @@
-All Positive Posts 
+<div class="welcome-img"></div>
+<div class="welcome">
+<h1>All Positive Posts</h1> 
 <% @positive_posts.each do |positive_post| %>
-   <h4><a href="/positive_posts/<%= positive_post.id %>"> <%= positive_post.created_at %></a></h4>
+   <h4><a href="/positive_posts/<%= positive_post.id %>"> <%= positive_post.created_at.to_date %></a></h4>
 
   <p> <%= positive_post.content %> </p>
   <p>By <%= positive_post.user.name %></p>
     
 <br><br>
 <% end %>
+</div>

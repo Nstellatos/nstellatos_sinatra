@@ -1,7 +1,7 @@
 
 .topnav {
   overflow: hidden;
-  background-color: rgb(6, 170, 247);
+  background-color: rgb(6, 179, 247);
 }
 
 .topnav a {
@@ -14,7 +14,7 @@
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: rgb(238, 255, 0);
   color: rgba(0, 0, 0, 0.199);
 }
 
@@ -22,6 +22,7 @@
   background-color: #4CAF50;
   color: white;
 }
+
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -66,6 +67,9 @@ button {
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
+  display: flex;
+  align-items: center;
+  padding-left: 125px;
   border: none;
   cursor: pointer;
   width: 100%;
@@ -124,7 +128,7 @@ input[type=text]:focus, input[type=password]:focus {
 
 /* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
+  background-color: #000000;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -132,6 +136,7 @@ button {
   cursor: pointer;
   width: 100%;
   opacity: 0.9;
+
 }
 
 button:hover {
@@ -139,7 +144,7 @@ button:hover {
 }
 
 /* Extra styles for the cancel button */
-.cancelbtn {
+button .cancelbtn {
   padding: 14px 20px;
   background-color: #f44336;
 }
@@ -148,9 +153,11 @@ button:hover {
 .signupbtn {
   padding: 14px 20px;
   background-color: #36f46f;
+  width: auto;
+}
 
-  float: left;
-  width: 50%;
+form {
+  display: inline;
 }
 
 /* Add padding to container elements */
@@ -207,33 +214,4 @@ hr {
   content: "";
   clear: both;
   display: table;
-}
-.cancelbutton {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-
-.topnav {
-  overflow: hidden;
-  background-color: #333;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: rgba(0, 0, 0, 0.199);
-}
-
-.topnav a.active {
-  background-color: #4CAF50;
-  color: white;
 }
