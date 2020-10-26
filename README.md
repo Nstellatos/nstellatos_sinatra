@@ -6,6 +6,7 @@ This project is a simple CRUD app that allows a user to create, read, update & d
 
 Overview:
 - Users will have many posts
+
 Users can: 
 - sign up & log in
 - Edit and delete their posts
